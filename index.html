@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Testing </title>
+    <title> State with Waos Js </title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body id="waos">
-    <header>
-        <h1 class="flex flex-row items-center">
-            <iconify-icon icon="ion:home"></iconify-icon>
-            <p> Home </p>
-        </h1>
-    </header>
-    <strong state="counter" class="text-blue-400"> </strong>
-    <br>
-    <button on-click="change-counter"> Change state +1 </button>
+<body id="waos" class="bg-gray-900 w-full min-h-screen flex flex-col items-center">
+    <div class="container bg-blue-100 h-screen border flex flex-col items-center justify-center gap-10">
+        <h1 class="text-2xl border-b px-2"> Counter example </h1>
+        <p>
+            <span> This is a counter: </span>
+            <strong state="counter" class="text-blue-500"> </strong>
+        </p>
+        <button on-click="change-counter"
+            class="flex flex-row items-center gap-1 bg-gray-100 border py-2 px-3 rounded-md active:scale-95 duration-100">
+            Increment
+            counter <strong class="text-blue-500">+1</strong>
+        </button>
+    </div>
 
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script type="module" src="./app.js"></script>
 </body>
 
