@@ -1,4 +1,4 @@
-import { PointState, clickEvent } from './waos.js';
+import { PointState, clickEvent } from '/src/js/waos.js';
 
 // Create a new point state "counter" with value 0
 const counter = new PointState('counter', 0);

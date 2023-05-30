@@ -5,25 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.ico" type="image/x-icon">
+    <link rel="icon" sizes="48x48" href="favicon-48x48.ico" type="image/x-icon">
+    <link rel="icon" sizes="128x28" href="favicon-128x128.ico" type="image/x-icon">
     <title> State with Waos Js </title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body id="waos" class="bg-gray-900 w-full min-h-screen flex flex-col items-center">
-    <div class="container bg-blue-100 h-screen border flex flex-col items-center justify-center gap-10">
-        <h1 class="text-2xl border-b px-2"> Counter example </h1>
-        <p>
-            <span> This is a counter: </span>
-            <strong state="counter" class="text-blue-500"> </strong>
-        </p>
-        <button on-click="change-counter"
-            class="flex flex-row items-center gap-1 bg-gray-100 border py-2 px-3 rounded-md active:scale-95 duration-100">
-            Increment
-            counter <strong class="text-blue-500">+1</strong>
-        </button>
+<body id="waos" class="bg-black w-full min-h-screen flex flex-col items-center">
+    <div class="container h-screen flex items-center justify-center">
+        <div class="bg-gray-900 p-10 rounded-xl shadow-lg flex flex-col items-center justify-center gap-10 text-white">
+            <h1 class="text-2xl border-b px-2"> Counter example </h1>
+            <p>
+                <span> This is a counter: </span>
+                <strong state="counter" class="text-blue-500"> </strong>
+            </p>
+            <button on-click="change-counter"
+                class="bg-gray-800 border-none shadow-lg flex flex-row items-center gap-1 bg-gray-100 border py-2 px-3 rounded-md active:scale-95 duration-100">
+                Increment
+                counter <strong class="text-blue-500">+1</strong>
+            </button>
+        </div>
     </div>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./src/js/app.js"></script>
 </body>
 
 </html>
