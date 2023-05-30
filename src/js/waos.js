@@ -33,10 +33,11 @@ export class PointState {
        * @param {string} id - El ID del estado.
        * @param {string} initial - El valor inicial del estado.
     */
-  constructor(id, initial) {
+  constructor(id, initial = "") {
     this.id = `[state=${id}]`;
     this.value = initial;
     this.root = document.getElementById('waos');
+    console.log(this.root.querySelector(this.id));
     this.root.querySelector(this.id).innerHTML = this.value;
   }
 
@@ -66,10 +67,10 @@ export class PointState {
 }
 
 /**
-   * Agrega un evento de clic a un elemento.
-   * El ID del elemento al que se agregará el evento de clic.
+   * Agrega un evento de click a un elemento.
+   * El ID del elemento al que se agregará el evento de click.
    * @param {string} id
-   * La función que se ejecutará cuando se haga clic en el elemento.
+   * La función que se ejecutará cuando se haga click en el elemento.
    * @param {Function} handleChange
 */
 export function clickEvent(id, handleChange) {
@@ -77,3 +78,17 @@ export function clickEvent(id, handleChange) {
   root.querySelector(`[on-click=${id}]`)
       .addEventListener('click', handleChange);
 }
+
+/**
+   * Agrega un evento de input a un elemento.
+   * El ID del elemento al que se agregará el evento de input.
+   * @param {string} id
+   * La función que se ejecutará cuando se haga escribas en el elemento.
+   * @param {Function} handleChange
+*/
+export function inputEvent(id, handleChange) {
+  const root = document.getElementById('waos');
+  root.querySelector(`[on-input=${id}]`)
+      .addEventListener('input', handleChange);
+}
+
