@@ -1,4 +1,4 @@
-# Library for logic practice
+# Library for states on Vanilla Js
 
 1. Import Waos Js functions components on your project
 
@@ -64,3 +64,8 @@
     })
 ## Example:
 <img src="https://i.ibb.co/KW1VLgM/Waos-Js.png" alt="Waos-Js">
+
+### Go to website
+<a target="_blank" href="https://waos-js.netlify.app">
+    State with Waos Js
+</a>
