@@ -1,34 +1,79 @@
+/**
+ * Clase que representa el estado de un punto.
+ */
 export class PointState {
-    id = "";
-    value = "";
-    root = document.getElementById("waos");
-    changeTagValue = (value) => this.root.querySelector(this.id).innerHTML = value;
+  /**
+        * El ID del estado.
+        * @type {string}
+    */
+  id = '';
 
-    constructor(id, initial) {
-        this.id = `[state=${id}]`;
-        this.value = initial;
-        this.root.querySelector(this.id).innerHTML = this.value;
-    }
+  /**
+        * El valor del estado.
+        * @type {string}
+    */
+  value = '';
 
-    set(newValue) {
-        if (typeof newValue !== "function") {
-            this.value = newValue;
-            this.changeTagValue(this.value)
-            return;
-        }
-        (() => {
-            const value = newValue(this.value);
-            this.set(value);
-        })();
-    }
+  /**
+        * El elemento raíz del estado.
+        * @type {HTMLElement}
+    */
+  root = document.getElementById('waos');
 
-    get() {
-        return this.value;
+  /*
+      * Función que cambia el valor del estado en el DOM.
+      * @type {Function}
+  */
+  changeTagValue = (value) => {
+    this.root.querySelector(this.id).innerHTML = value;
+  };
+
+  /**
+       * Construye una instancia de PointState.
+       * @param {string} id - El ID del estado.
+       * @param {string} initial - El valor inicial del estado.
+    */
+  constructor(id, initial) {
+    this.id = `[state=${id}]`;
+    this.value = initial;
+    this.root = document.getElementById('waos');
+    this.root.querySelector(this.id).innerHTML = this.value;
+  }
+
+  /**
+       * Establece un nuevo valor para el estado.
+       * @param {string|Function} newValue -
+    */
+  set(newValue) {
+    if (typeof newValue !== 'function') {
+      this.value = newValue;
+      this.changeTagValue(this.value);
+      return;
     }
+    (() => {
+      const value = newValue(this.value);
+      this.set(value);
+    })();
+  }
+
+  /**
+       * Obtiene el valor actual del estado.
+       * @return {string} El valor actual del estado.
+    */
+  get() {
+    return this.value;
+  }
 }
 
+/**
+   * Agrega un evento de clic a un elemento.
+   * El ID del elemento al que se agregará el evento de clic.
+   * @param {string} id
+   * La función que se ejecutará cuando se haga clic en el elemento.
+   * @param {Function} handleChange
+*/
 export function clickEvent(id, handleChange) {
-    const root = document.getElementById("waos");
-    root.querySelector(`[on-click=${id}]`)
-        .addEventListener("click", handleChange);
+  const root = document.getElementById('waos');
+  root.querySelector(`[on-click=${id}]`)
+      .addEventListener('click', handleChange);
 }
