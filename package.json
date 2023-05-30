@@ -1,13 +1,14 @@
 {
-  "name": "probando",
+  "name": "waos-js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "npx eslint ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Erick Ramírez",
+  "email": "erickgiber7@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.41.0",
