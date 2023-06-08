@@ -11,6 +11,6 @@
         "sourceType": "module"
     },
     "rules": {
-        "import/extensions": false
+        "import/extensions": "off"
     }
 }
