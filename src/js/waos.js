@@ -33,11 +33,10 @@ export class PointState {
        * @param {string} id - El ID del estado.
        * @param {string} initial - El valor inicial del estado.
     */
-  constructor(id, initial = "") {
+  constructor(id, initial = '') {
     this.id = `[state=${id}]`;
     this.value = initial;
     this.root = document.getElementById('waos');
-    console.log(this.root.querySelector(this.id));
     this.root.querySelector(this.id).innerHTML = this.value;
   }
 
@@ -76,7 +75,7 @@ export class PointState {
 export function clickEvent(id, handleChange) {
   const root = document.getElementById('waos');
   root.querySelector(`[on-click=${id}]`)
-      .addEventListener('click', handleChange);
+    .addEventListener('click', handleChange);
 }
 
 /**
@@ -89,6 +88,5 @@ export function clickEvent(id, handleChange) {
 export function inputEvent(id, handleChange) {
   const root = document.getElementById('waos');
   root.querySelector(`[on-input=${id}]`)
-      .addEventListener('input', handleChange);
+    .addEventListener('input', handleChange);
 }
-

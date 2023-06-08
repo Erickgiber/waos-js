@@ -11,6 +11,6 @@ clickEvent('change-counter', () => counter.set((prev) => prev + 1));
 
 // This is a Event Listener "input"
 inputEvent('textarea-input', (event) => {
-    const value = event.target.value
-    textarea.set(value);
+  const { value } = event.target;
+  textarea.set(value);
 });
