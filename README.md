@@ -66,6 +66,6 @@
 <img src="https://i.ibb.co/KW1VLgM/Waos-Js.png" alt="Waos-Js">
 
 ### Go to website
-<a target="_blank" href="https://waos-js.netlify.app">
+<a target="_blank" href="https://waos-js.vercel.app/">
     State with Waos Js
 </a>
